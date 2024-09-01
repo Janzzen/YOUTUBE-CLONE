@@ -1,25 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-/* *{
+/* Resetting margins and paddings for a consistent look */
+* {
     margin: 0;
     padding: 0;
-} */
-
-body{
-    font-family: "Roboto", sans-serif;
-    margin: 0;
+    box-sizing: border-box;
 }
 
-p{
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+p {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-.thumbnail{
+.thumbnail {
     width: 100%;
 }
 
-.video-title{
+.video-title {
     margin-top: 0;
     font-size: 14px;
     font-weight: 500;
@@ -27,42 +30,43 @@ p{
     margin-bottom: 12px;
 }
 
-.video-author, .video-stats{
+.video-author, .video-stats {
     font-size: 12px;
     color: rgb(96, 96, 96);
 }
 
-.video-author{
+.video-author {
     margin-bottom: 4px;
 }
 
-.video__container{
+.video__container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 16px;
-    row-gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    padding: 20px;
 }
 
-.video-container{
+.video-container {
     margin-bottom: 12px;
 }
-.details-container{
-    display: grid;
-    grid-template-columns: 50px 1fr;
+
+.details-container {
+    display: flex;
+    align-items: flex-start;
 }
 
-.channel-container{
-    width: 40px;
-    vertical-align: top;
+.channel-container {
+    width: 50px;
+    margin-right: 10px;
 }
 
-.profile-icon{
+.profile-icon {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 50%;
 }
 
-.info-container{
-    width: 200px;
+.info-container {
+    max-width: 200px;
 }
 
 .header {
@@ -71,39 +75,39 @@ p{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
+    background-color: #fff; /* Add background color for better visibility */
+    border-bottom: 1px solid #ddd; /* Add border for separation */
 }
 
-
-
-/* Customize other elements as needed */
 .left-section {
-
+    display: flex;
+    align-items: center;
 }
 
 .hamburger-menu {
     height: 20px;
-    margin:0 20px ;   
+    margin-right: 20px;
 }
 
-.youtube-logo{
-    height: 20px; 
+.youtube-logo {
+    height: 20px;
 }
-
 
 .middle-section {
     flex: 1;
-    margin-left: 70px;
-    margin-right: 35px;
+    margin-left: 20px;
+    margin-right: 20px;
     max-width: 500px;
     display: flex;
     align-items: center;
 }
 
-.search-bar::placeholder{
+.search-bar::placeholder {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
-.search-bar{
+.search-bar {
     flex: 1;
     height: 36px;
     padding-left: 10px;
@@ -115,28 +119,48 @@ p{
     box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
 }
 
-.search-button{
+.search-button {
     width: 60px;
-    height: 40px;
+    height: 36px; /* Adjusted for consistency */
     background-color: rgb(240, 240, 240);
     border-width: 1px;
     border-style: solid;
     border-color: rgb(192, 192, 192);
     margin-left: -1px;
     margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.search-icon{
-    height: 25px;
-    margin-top: 4px; 
+.search-icon {
+    height: 20px; /* Adjusted for consistency */
 }
 
-.voice-search-button{
-    width: 40px;
-    height: 40px;
+.voice-search-button {
+    width: 36px; /* Adjusted for consistency */
+    height: 36px;
+    border-radius: 18px;
+    border: none;
+    background-color: #f0f0f0; /* Optional: Add background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .right-section {
-    background-color: lightblue;
-    width: 200px;
+    display: flex;
+    align-items: center;
+    width: 220px;
+}
+
+.upload-icon, .youtube-apps-icon, .notification-icon {
+    height: 24px;
+    margin-left: 10px;
+}
+
+.current-user-picture {
+    height: 32px;
+    border-radius: 50%;
+    margin-left: 10px;
 }
